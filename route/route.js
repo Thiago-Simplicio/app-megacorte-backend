@@ -8,4 +8,9 @@ route.delete('/cliente-delete/:_id', Cliente.delete)
 route.post('/cliente-login', Cliente.login)
 route.get('/destroy-token', Cliente.destroytoken)
 
+const Company = require('../controller/CompanyController')
+route.get('/companyes', Company.find)
+route.post('/company-create', Company.create)
+route.delete('/company-delete', Company.delete)
+
 module.exports = route
